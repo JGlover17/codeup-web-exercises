@@ -122,3 +122,4 @@ let originalPrice = 100;
 let discount = 0.2; // 20% discount
 let newPrice = applyDiscount(originalPrice, discount);
 console.log("The price after discount is: $" + newPrice.toFixed(2));
+
