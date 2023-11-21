@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Objects_Date_JS</title>
+</head>
+<body>
+<script !src="">
+  let months = ["January", "February", "March",
+    "April", "May", "June",
+    "July", "August", "September",
+    "October", "November", "December"];
+
+  let jsBirthday = new Date(1976, 6, 9);
+  // Extract the components of the date
+  let month = months[jsBirthday.getMonth()];
+  let day = jsBirthday.getDate();
+  let year = jsBirthday.getFullYear();
+
+  // Format the date into a string
+  let formattedDate = `${month} ${day}, ${year}`;
+
+
+  console.log('Here is my birthday using JavaScript: ' + formattedDate);
+</script>
+
+
+</body>
+</html>
