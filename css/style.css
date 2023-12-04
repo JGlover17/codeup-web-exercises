@@ -5,4 +5,68 @@ this file is named "site.css" and is in a directory named "css"
 .fancy-header {
     color: purple;
     text-decoration: underline;
+    text-align: center;
+}
+
+h1, h2, h3 {
+    color: blue;
+    text-decoration: underline;
+}
+body {
+    background-color: rosybrown;
+}
+body::before {
+    content: "";
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -100;
+    background-image: url("img/dogs.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+ul {
+    list-style-type: square;
+}
+
+html {
+    font-family: "American Typewriter", "Academy Engraved LET";
+}
+
+table {
+    padding: 10px;
+    font-size: 16px;
+}
+
+td, th {
+    padding: 5px;
+    font-size: 14px;
+}
+
+tr {
+    padding: 5px;
+}
+
+a:link {
+    color: blue;
+    text-decoration: none;
+}
+
+a:visited {
+    color: purple;
+}
+
+a:hover {
+    color: red;
+    text-decoration: underline;
+}
+
+a:active {
+    color: green;
 }
