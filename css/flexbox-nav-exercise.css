@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Work+Sans:wght@400;700&display=swap');
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0; /* Remove default margin */
+    font-family: 'Work Sans', sans-serif; /* Default font for the body */
+}
+
+/* Navbar container */
+nav {
+    display: flex; /* Use flexbox for the navbar */
+    justify-content: space-between; /* Center logo horizontally */
+    align-items: center;
+    padding: 0.2em 0; /* Padding above and below the logo */
+    background-color: #808080;
+    width: 100%;
+}
+.nav-left {
+    display: flex;
+}
+
+.nav-right {
+    display: flex;
+}
+/* Logo styles */
+.logo {
+    font-family: 'Montserrat', sans-serif; /* Logo font */
+    font-size: 3em; /* Logo size */
+    padding: 0.2em; /* Logo padding */
+    margin: 0 1em; /* Space around the logo */
+}
+
+/* Style for all anchor tags */
+a {
+    text-decoration: none; /* Remove underline from all anchor tags */
+    color: black; /* Default text color */
+    display: inline-block; /* Make anchor tags inline-block */
+    padding: 0.2em; /* Padding to increase clickable area */
+}
+
+/* Change link color on hover */
+a:hover {
+    color: blue; /* Color for hover state */
+}
+
+/* Styles for the menu items */
+.menu-item {
+    padding: 0.5em 1em; /* Padding for menu items */
+}
+
+/* Clear default styles for unordered list */
+ul {
+    list-style-type: none; /* Remove default list styling */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    display: flex; /* Display list items in a row */
+}
+
+/* List items */
+li {
+    display: inline; /* Display list items inline */
+}
+
