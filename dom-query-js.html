@@ -4,42 +4,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
     <title>Dom-Query-js</title>
+    <style>
+        li:hover {
+            color: red;
+        }
+    </style>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            // Get the elements
+        <!--
             const mainHeader = document.getElementById('main-header');
             const subHeader = document.getElementById('sub-header');
             const listItems = document.querySelectorAll('ul li');
             const subParagraphs = document.getElementsByClassName('sub-paragraph');
-
+-->
             // Button 1 - Change Main Header Text
-            document.getElementById('btn1').addEventListener('click', function() {
-                mainHeader.innerHTML = "JavaScript is Cool";
+            // document.getElementById('btn1').addEventListener('click', function() {
+            //     mainHeader.innerHTML = "JavaScript is Cool";
+            // });
+            //
+            // // Button 2 - Change Sub Header Color
+            // document.getElementById('btn2').addEventListener('click', function() {
+            //     subHeader.style.color = 'blue';
+            // });
+            //
+            // // Button 3 - Change List Items
+            // document.getElementById('btn3').addEventListener('click', function() {
+            //     listItems.forEach((item, index) => {
+            //         if (index % 2 === 1) {
+            //             item.style.color = 'grey';
+            //         }
+            //         if (item.getAttribute('data-dbid') === '1') {
+            //             item.style.color = 'blue';
+            //         }
+            //     });
+            // });
+
+            // // Button 4 - Change First Sub Paragraph Text
+            // document.getElementById('btn4').addEventListener('click', function() {
+            //     if (subParagraphs.length > 0) {
+            //         subParagraphs[0].innerText = "Mission Accomplished!";
+            //     }
+            // });
+// Code to change h1 background color on click
+            const mainHeader = document.getElementById('main-header');
+            mainHeader.addEventListener('click', function() {
+                this.style.backgroundColor = 'lightblue';
             });
 
-            // Button 2 - Change Sub Header Color
-            document.getElementById('btn2').addEventListener('click', function() {
-                subHeader.style.color = 'blue';
-            });
-
-            // Button 3 - Change List Items
-            document.getElementById('btn3').addEventListener('click', function() {
-                listItems.forEach((item, index) => {
-                    if (index % 2 === 1) {
-                        item.style.color = 'grey';
-                    }
-                    if (item.getAttribute('data-dbid') === '1') {
-                        item.style.color = 'blue';
-                    }
+            // Code to change paragraph font size on double click
+            const paragraphs = document.querySelectorAll('p');
+            paragraphs.forEach(function(p) {
+                p.addEventListener('dblclick', function() {
+                    this.style.fontSize = '18px';
                 });
             });
 
-            // Button 4 - Change First Sub Paragraph Text
-            document.getElementById('btn4').addEventListener('click', function() {
-                if (subParagraphs.length > 0) {
-                    subParagraphs[0].innerText = "Mission Accomplished!";
-                }
-            });
+
         });
     </script>
 </head>
