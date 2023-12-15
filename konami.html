@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>Konami Code</title>
+    <style>
+        body {
+            background-image: url('img/Contra.jpeg'); /* Adjust the path as needed */
+            background-size: cover; /* This ensures the background covers the entire body */
+            background-repeat: no-repeat; /* This will prevent the image from repeating */
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Konami Code</h1>
+    <script>
+        "use strict";
+
+        const konamiCode = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a', 'Enter'];
+        let currentSequence = [];
+
+        document.addEventListener("keyup", event => {
+            currentSequence.push(event.key);
+            if (currentSequence.length > konamiCode.length) {
+                currentSequence.shift();
+            }
+
+            if (isKonamiCode(currentSequence, konamiCode)) {
+                alert("You have added 30 lives!");
+
+
+                // Other actions like changing background or playing a sound
+                // document.body.style.background = "your-color-or-image";
+                // new Audio('your-sound-file.mp3').play();
+
+                currentSequence = []; // Reset the sequence after successful entry
+            }
+        });
+
+        function isKonamiCode(current, konami) {
+            if (current.length !== konami.length) {
+                return false;
+            }
+            for (let i = 0; i < konami.length; i++) {
+                if (current[i] !== konami[i]) {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+
+    </script>
+
+</body>
+</html>
